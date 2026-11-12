@@ -1,5 +1,6 @@
 import flet as ft
 from story import intro_rimsky
+from view.shop_view import intro_shop
 
 
 
@@ -23,6 +24,15 @@ def main(page: ft.Page):
         area.controls = [
             ft.Text("Vid bron", size=26),
             ft.Text(intro_rimsky("ada")),
+            ft.Button("Till startsidan", on_click=show_start),
+            ft.Button("Till afären", on_click=show_shop),
+        ]
+        page.update()
+
+    def show_shop(e=None):
+        area.controls = [
+            ft.Text("I affären", size=26),
+            ft.Text(intro_shop()),
             ft.Button("Till startsidan", on_click=show_start),
         ]
         page.update()
