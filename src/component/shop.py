@@ -1,6 +1,10 @@
-def lampoil(name):
+def gold():
+    gold = 20,
+
+def lampoil():
     if gold >= 5:
         lampoil = True,
+        gold -= 5
         rich = True,
         poor = False,   
     elif gold < 5:
@@ -10,6 +14,7 @@ def lampoil(name):
 def rope():
     if gold >= 10:
         lampoil = True,
+        gold -= 10
         rich = True, 
         poor = False,   
     elif gold < 10:
@@ -19,14 +24,10 @@ def rope():
 def bomb():
     if gold >= 20:
         lampoil = True,
+        gold -= 20
         rich = True,
         poor = False,   
     elif gold < 20:
         poor = True,  
         rich = False,
 
-def poor_hero():
-    return "Tyvärr, "f"{name}",", jag kan inte ge dig kredit! Kom tillbaka när du är lite mmmm rikare.",
-
-def hero_buy():
-    return "Tack för köpet, kom gärna tillbacka"

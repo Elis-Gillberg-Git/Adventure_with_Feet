@@ -1,7 +1,16 @@
 import flet as ft
 from story import intro_rimsky
 from view.shop_view import intro_shop
+from component.shop import gold
+from view.shop_view import cahs_counter
+from view.shop_view import shoping_response
+from component.shop import rope
+from component.shop import lampoil
+from component.shop import  bomb
 
+import component.create_person as p
+
+person = p.createPerson()
 
 
 def main(page: ft.Page):
@@ -23,7 +32,7 @@ def main(page: ft.Page):
     def show_story(e=None):
         area.controls = [
             ft.Text("Vid bron", size=26),
-            ft.Text(intro_rimsky("ada")),
+            ft.Text(intro_rimsky(person)),
             ft.Button("Till startsidan", on_click=show_start),
             ft.Button("Till afären", on_click=show_shop),
         ]
@@ -32,8 +41,14 @@ def main(page: ft.Page):
     def show_shop(e=None):
         area.controls = [
             ft.Text("I affären", size=26),
-            ft.Text(intro_shop()),
             ft.Button("Till startsidan", on_click=show_start),
+            ft.Text(intro_shop()),
+            ft.Button("skaffa guld", on_click=gold),
+            ft.Text(cahs_counter(gold)),
+            ft.Text(shoping_response("Link")),
+            ft.Button("skaffa lampolja", on_click=lampoil),
+            ft.Button("skaffa rep", on_click=rope),
+            ft.Button("skaffa bomber", on_click=bomb),
         ]
         page.update()
  
