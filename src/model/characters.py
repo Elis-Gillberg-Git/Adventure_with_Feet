@@ -1,0 +1,1 @@
+person = { "name": "", "gold": 0, "weapon": False, "age": 21}
